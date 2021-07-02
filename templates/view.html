@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Index </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body></br></br></br></br></br>
+        <div align="center">
+          <div align="center" class="border">
+             <div class="header">
+                <h2 class="word">View</h2>
+             </div></br></br></br>
+             <div class="word">
+               <div align="center">
+                 <table>
+                   <thead>
+                     <tr>
+                    <th>ID</th>
+                    <th>Notifications</th>
+                    <th>Post ID</th>
+                     </tr>
+                   </thead>
+                 <tbody>
+                   {% for row in data %}
+               <tr>
+                   <td>{{row.0}}</td>
+                   <td>{{row.1}}</td>
+                   <td>{{row.2}}</td>
+               </tr>
+                    {% endfor %}
+              </tbody>
+            </table>
+               </div></br></br></br>
+                   <a href="{{ url_for('notifications') }}" class="btn">Notifications</a>
+                   <a href="{{ url_for('logout') }}" class="btn">Logout</a>
+             </div>
+          </div>
+        </div>
+    </body>
+</html>

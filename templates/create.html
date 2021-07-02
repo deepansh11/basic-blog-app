@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Index </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body></br></br></br></br></br>
+        <div align="center">
+          <div align="center" class="border">
+             <div class="header">
+                <h2 class="word">Create</h2>
+             </div></br></br></br>
+             <div class="word">
+                 <form action="{{ url_for('create') }}" method="post">
+                     <input id="create" name="create_notification" type="text" placeholder="create a notification" class="textbox"/></br></br>
+                     <input type="submit" class="btn" value="Submit"></br></br>
+                 </form></br></br></br>
+                 <div class="msg">{{ msg }}</div></br></br></br>
+                   <a href="{{ url_for('notifications') }}" class="btn">Notifications</a>
+                   <a href="{{ url_for('logout') }}" class="btn">Logout</a>
+             </div>
+          </div>
+        </div>
+    </body>
+</html>

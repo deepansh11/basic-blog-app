@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Notifications</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <div align="center">
+      <div align="center" class="border">
+         <div class="header">
+            <h1 class="word">Notifications</h1>
+         </div></br></br></br>
+            <h1 class="bottom">
+                 Hi {{session.username}}!!</br></br> Welcome to the notifications page...
+            </h1></br></br></br>
+            <a href="{{ url_for('create') }}" class="btn">Create</a>
+            <a href="{{ url_for('update') }}" class="btn">Update</a>
+            <a href="{{ url_for('view') }}" class="btn">View</a></br></br></br>
+            <a href="{{ url_for('delete') }}" class="btn">Delete</a>
+    </body>
+</html>
